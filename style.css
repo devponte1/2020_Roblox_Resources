@@ -3,19 +3,19 @@
 /* 1. Font: GothamSSm */
 @font-face {
   font-family: 'GothamSSm';
-  src: url('./font/GothamSSm-Medium.woff2') format('woff2');
+  src: url('https://raw.githubusercontent.com/yourusername/2020-Roblox_Resources/main/font/GothamSSm-Medium.woff2') format('woff2'); /* GitHub repo link */
   font-weight: 500;
   font-style: normal;
 }
 
-html, body, button, input, select, textarea, 
-h1, h2, h3, h4, h5, h6, p, span, a, div, li {
+html, body, button, input, select, textarea,
+h1, h2, h3, h4, h5, h6, p, span, a, li {
   font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
-  color: #606162 !important; /* default text color */
+  color: #606162 !important; /* default text */
 }
 
 b, strong, h1, h2, h3, h4, h5, h6 {
-  color: #393b3d !important; /* bold/dark text */
+  color: #393b3d !important; /* bold/dark */
 }
 
 /* 2. Buttons back to green */
@@ -35,7 +35,7 @@ a.btn-growth-lg {
   color: #fff !important;
   border-radius: 4px !important;
   font-weight: 600 !important;
-  text-shadow: none !important; /* remove text outline/glow */
+  text-shadow: none !important;
 }
 
 button:hover,
@@ -54,35 +54,42 @@ a.btn-growth-lg:hover {
 
 /* 3. Backgrounds */
 body {
-  background-color: #f2f4f5 !important; /* light theme */
+  background-color: #f2f4f5 !important; /* light gray theme */
 }
 
 /* Header / top navigation bar */
-header, 
-nav[role="navigation"], 
-[class*="header"], 
+header,
+nav[role="navigation"],
+[class*="header"],
 .rbx-navbar {
   background-color: #dee1e3 !important;
   border-bottom: 1px solid #d6d6d6 !important;
   color: #393b3d !important;
 }
 
-/* Remove unwanted white boxes inside the page */
-div, section, article, aside, main, footer {
-  background-color: transparent !important;
-}
-
-/* Specific containers that Roblox forces white on */
+/* === Fix: No global div wipe === */
+/* Only remove forced white from specific Roblox containers */
 .profile-platform-container,
 .container-with-header,
 .section,
 .content,
 [data-profile-type],
-[data-testid="profile-container"] {
+[data-testid="profile-container"],
+[role="main"] {
   background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* Keep modal/popups working (don’t break overlays) */
+/* Keep cards clean */
+.card,
+.card-container,
+.card-item {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Keep modals and dropdowns functional */
 .modal-content,
 .dropdown-menu,
 .popover {
