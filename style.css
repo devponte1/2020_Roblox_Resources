@@ -1,4 +1,4 @@
-/* === Roblox 2020 Look (Updated) === */
+/* === Roblox 2020 Look === */
 
 /* 1. Font: GothamSSm */
 @font-face {
@@ -8,54 +8,81 @@
   font-style: normal;
 }
 
-html, body, button, input, select, textarea,
-h1, h2, h3, h4, h5, h6, p, span, a, li {
+html, body, button, input, select, textarea, 
+h1, h2, h3, h4, h5, h6, p, span, a, div, li {
   font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
-  color: #606162 !important; /* normal text */
+  color: #606162 !important; /* default text color */
 }
 
 b, strong, h1, h2, h3, h4, h5, h6 {
-  color: #393b3d !important; /* bold text */
+  color: #393b3d !important; /* bold/dark text */
 }
 
-/* 2. Backgrounds */
+/* 2. Buttons back to green */
+button,
+.btn-primary,
+[role="button"].btn-primary,
+.btn-growth-md,
+.btn-growth-sm,
+.btn-growth-lg,
+.rbx-navbar-signup,
+.rbx-navbar-login,
+a.btn-growth-md,
+a.btn-growth-sm,
+a.btn-growth-lg {
+  background-color: #00B65C !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  text-shadow: none !important; /* remove text outline/glow */
+}
+
+button:hover,
+.btn-primary:hover,
+[role="button"].btn-primary:hover,
+.btn-growth-md:hover,
+.btn-growth-sm:hover,
+.btn-growth-lg:hover,
+.rbx-navbar-signup:hover,
+.rbx-navbar-login:hover,
+a.btn-growth-md:hover,
+a.btn-growth-sm:hover,
+a.btn-growth-lg:hover {
+  background-color: #00a955 !important;
+}
+
+/* 3. Backgrounds */
 body {
-  background-color: #f2f4f5 !important; /* light gray */
+  background-color: #f2f4f5 !important; /* light theme */
 }
 
 /* Header / top navigation bar */
-header,
-nav[role="navigation"],
-[class*="header"],
+header, 
+nav[role="navigation"], 
+[class*="header"], 
 .rbx-navbar {
   background-color: #dee1e3 !important;
   border-bottom: 1px solid #d6d6d6 !important;
   color: #393b3d !important;
 }
 
-/* === Fix: No global div wipe === */
-/* Only remove forced white on Roblox containers */
+/* Remove unwanted white boxes inside the page */
+div, section, article, aside, main, footer {
+  background-color: transparent !important;
+}
+
+/* Specific containers that Roblox forces white on */
 .profile-platform-container,
 .container-with-header,
 .section,
 .content,
 [data-profile-type],
-[data-testid="profile-container"],
-[role="main"] {
+[data-testid="profile-container"] {
   background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
-/* Cards */
-.card,
-.card-container,
-.card-item {
-  background: transparent !important;
-  border: none !important;
-}
-
-/* Keep modals, menus, overlays working */
+/* Keep modal/popups working (don’t break overlays) */
 .modal-content,
 .dropdown-menu,
 .popover {
