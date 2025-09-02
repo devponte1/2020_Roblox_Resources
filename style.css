@@ -1,9 +1,9 @@
-/* === Roblox 2020 Look === */
+/* === Roblox 2020 Look (Updated) === */
 
 /* 1. Font: GothamSSm */
 @font-face {
   font-family: 'GothamSSm';
-  src: url('https://raw.githubusercontent.com/yourusername/2020-Roblox_Resources/main/font/GothamSSm-Medium.woff2') format('woff2'); /* GitHub repo link */
+  src: url('https://devponte1.github.io/2020-Roblox_Resources/fonts/GothamSSm-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
@@ -11,50 +11,16 @@
 html, body, button, input, select, textarea,
 h1, h2, h3, h4, h5, h6, p, span, a, li {
   font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
-  color: #606162 !important; /* default text */
+  color: #606162 !important; /* normal text */
 }
 
 b, strong, h1, h2, h3, h4, h5, h6 {
-  color: #393b3d !important; /* bold/dark */
+  color: #393b3d !important; /* bold text */
 }
 
-/* 2. Buttons back to green */
-button,
-.btn-primary,
-[role="button"].btn-primary,
-.btn-growth-md,
-.btn-growth-sm,
-.btn-growth-lg,
-.rbx-navbar-signup,
-.rbx-navbar-login,
-a.btn-growth-md,
-a.btn-growth-sm,
-a.btn-growth-lg {
-  background-color: #00B65C !important;
-  border: none !important;
-  color: #fff !important;
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-  text-shadow: none !important;
-}
-
-button:hover,
-.btn-primary:hover,
-[role="button"].btn-primary:hover,
-.btn-growth-md:hover,
-.btn-growth-sm:hover,
-.btn-growth-lg:hover,
-.rbx-navbar-signup:hover,
-.rbx-navbar-login:hover,
-a.btn-growth-md:hover,
-a.btn-growth-sm:hover,
-a.btn-growth-lg:hover {
-  background-color: #00a955 !important;
-}
-
-/* 3. Backgrounds */
+/* 2. Backgrounds */
 body {
-  background-color: #f2f4f5 !important; /* light gray theme */
+  background-color: #f2f4f5 !important; /* light gray */
 }
 
 /* Header / top navigation bar */
@@ -68,7 +34,7 @@ nav[role="navigation"],
 }
 
 /* === Fix: No global div wipe === */
-/* Only remove forced white from specific Roblox containers */
+/* Only remove forced white on Roblox containers */
 .profile-platform-container,
 .container-with-header,
 .section,
@@ -81,7 +47,7 @@ nav[role="navigation"],
   box-shadow: none !important;
 }
 
-/* Keep cards clean */
+/* Cards */
 .card,
 .card-container,
 .card-item {
@@ -89,7 +55,7 @@ nav[role="navigation"],
   border: none !important;
 }
 
-/* Keep modals and dropdowns functional */
+/* Keep modals, menus, overlays working */
 .modal-content,
 .dropdown-menu,
 .popover {
