@@ -1,4 +1,4 @@
-/* === Roblox 2020 Look: Buttons + Font (no description/title override) === */
+/* === Roblox 2020 Look: Buttons, Font, Light Theme === */
 
 /* 1. GothamSSm Medium font */
 @font-face {
@@ -9,7 +9,7 @@
   font-display: swap;
 }
 
-/* 2. Apply font to all UI elements, excluding descriptions/titles */
+/* 2. Apply font to UI elements (buttons, links, nav items) */
 button,
 input, select, textarea,
 a,
@@ -32,17 +32,27 @@ a,
   background-color: #009966 !important;
 }
 
-/* 4. Sign Up button special green (#3fc679) */
-/* Updated selector to match actual element */
+/* 4. Sign Up button special green (#3fc679), no text stroke */
 a.rbx-navbar-signup.signup-button {
   background-color: #3fc679 !important;
   color: #fff !important;
   border-radius: 4px !important;
   font-weight: 600 !important;
-  padding: 6px 12px !important; /* adjust size if needed */
+  padding: 6px 12px !important;
   text-decoration: none !important;
+  text-shadow: none !important; /* remove stroke/outline */
 }
 
 a.rbx-navbar-signup.signup-button:hover {
   background-color: #35b96a !important;
+}
+
+/* 5. Light theme background/header colors */
+body {
+  background-color: #f2f4f5 !important; /* light theme body */
+}
+
+header, nav[role="navigation"], [class*="header"] {
+  background-color: #dee1e3 !important; /* light theme header */
+  border-bottom: 1px solid #d6d6d6 !important;
 }
