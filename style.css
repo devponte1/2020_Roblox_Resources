@@ -3,7 +3,7 @@
 /* 1. Apply GothamSSm font */
 @font-face {
   font-family: 'GothamSSm';
-  src: url('./font/GothamSSm-Medium.woff2') format('woff2');
+  src: url('https://devponte1.github.io/2020_Roblox_Resources/fonts/GothamSSm-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
@@ -35,13 +35,14 @@ header, nav[role="navigation"], [class*="header"] {
   border-bottom: 1px solid #d6d6d6 !important;
 }
 
-html.dark-theme body {
+/* Dark theme override (check Roblox class) */
+body.dark-theme, html.dark-theme body {
   background-color: #1b1d1f !important;
 }
 
-html.dark-theme header,
-html.dark-theme nav[role="navigation"],
-html.dark-theme [class*="header"] {
+body.dark-theme header,
+body.dark-theme nav[role="navigation"],
+body.dark-theme [class*="header"] {
   background-color: #232527 !important;
   border-bottom: 1px solid #000 !important;
 }
