@@ -1,19 +1,22 @@
-/* === Roblox 2020 Look: Buttons + Font Only === */
+/* === Roblox 2020 Look: Specific Buttons + GothamSSm Medium === */
 
-/* 1. Apply GothamSSm Medium font */
+/* 1. GothamSSm Medium font */
 @font-face {
   font-family: 'GothamSSm';
   src: url('https://devponte1.github.io/2020_Roblox_Resources/fonts/GothamSSm-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
-html, body, button, input, select, textarea {
+/* Apply font globally */
+html, body, button, a, input, select, textarea {
   font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
 }
 
-/* 2. Make main action buttons green */
-button, .btn-primary, [role="button"].btn-primary {
+/* 2. Specific main buttons green */
+.btn-common-play-game-lg,
+.btn-growth-md.buy-robux {
   background-color: #00B65C !important;
   border: none !important;
   color: #fff !important;
@@ -21,6 +24,8 @@ button, .btn-primary, [role="button"].btn-primary {
   font-weight: 600 !important;
 }
 
-button:hover, .btn-primary:hover, [role="button"].btn-primary:hover {
+/* Hover effect */
+.btn-common-play-game-lg:hover,
+.btn-growth-md.buy-robux:hover {
   background-color: #00a955 !important;
 }
