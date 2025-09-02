@@ -1,4 +1,4 @@
-/* === Roblox 2020 Look: Buttons, Font, Light Theme === */
+/* === Roblox 2020 Look: Background, Header, Text Colors, Buttons, Font === */
 
 /* 1. GothamSSm Medium font */
 @font-face {
@@ -17,7 +17,25 @@ a,
   font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
 }
 
-/* 3. Main buttons green (#00b06f) */
+/* 3. Page background */
+body {
+  background-color: #f2f4f5 !important; /* Light theme background */
+  color: #606162 !important; /* Normal text color */
+}
+
+/* 4. Header / topbar */
+header, nav[role="navigation"], [class*="header"] {
+  background-color: #dee1e3 !important; /* Light theme header */
+  border-bottom: 1px solid #d6d6d6 !important;
+  color: #393b3d !important; /* Bold text color for topbar items */
+}
+
+/* 5. Bold text color */
+b, strong, .font-bold {
+  color: #393b3d !important;
+}
+
+/* 6. Main buttons green (#00b06f) */
 .btn-common-play-game-lg,
 .btn-growth-md.buy-robux {
   background-color: #00b06f !important;
@@ -32,7 +50,7 @@ a,
   background-color: #009966 !important;
 }
 
-/* 4. Sign Up button special green (#3fc679), no text stroke */
+/* 7. Sign Up button special green (#3fc679), no text stroke */
 a.rbx-navbar-signup.signup-button {
   background-color: #3fc679 !important;
   color: #fff !important;
@@ -45,14 +63,4 @@ a.rbx-navbar-signup.signup-button {
 
 a.rbx-navbar-signup.signup-button:hover {
   background-color: #35b96a !important;
-}
-
-/* 5. Light theme background/header colors */
-body {
-  background-color: #f2f4f5 !important; /* light theme body */
-}
-
-header, nav[role="navigation"], [class*="header"] {
-  background-color: #dee1e3 !important; /* light theme header */
-  border-bottom: 1px solid #d6d6d6 !important;
 }
