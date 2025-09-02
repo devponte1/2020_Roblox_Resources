@@ -3,7 +3,7 @@
 /* 1. Font: GothamSSm */
 @font-face {
   font-family: 'GothamSSm';
-  src: url('https://devponte1.github.io/2020-Roblox_Resources/fonts/GothamSSm-Medium.woff2') format('woff2');
+  src: url('./font/GothamSSm-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
