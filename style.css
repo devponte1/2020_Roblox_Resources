@@ -1,91 +1,66 @@
-/* === Roblox 2020 Look === */
+/* === Roblox 2020 Look: Background, Header, Text Colors, Buttons, Font === */
 
-/* 1. Font: GothamSSm */
+/* 1. GothamSSm Medium font */
 @font-face {
   font-family: 'GothamSSm';
-  src: url('./fonts/GothamSSm-Medium.woff2') format('woff2');
+  src: url('https://devponte1.github.io/2020_Roblox_Resources/fonts/GothamSSm-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
-html, body, button, input, select, textarea, 
-h1, h2, h3, h4, h5, h6, p, span, a, div, li {
-  font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
-  color: #606162 !important; /* default text color */
-}
-
-b, strong, h1, h2, h3, h4, h5, h6 {
-  color: #393b3d !important; /* bold/dark text */
-}
-
-/* 2. Buttons back to green */
+/* 2. Apply font to UI elements (buttons, links, nav items) */
 button,
-.btn-primary,
-[role="button"].btn-primary,
-.btn-growth-md,
-.btn-growth-sm,
-.btn-growth-lg,
-.rbx-navbar-signup,
-.rbx-navbar-login,
-a.btn-growth-md,
-a.btn-growth-sm,
-a.btn-growth-lg {
-  background-color: #00B65C !important;
+input, select, textarea,
+a,
+.navbar-nav * {
+  font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
+}
+
+/* 3. Page background */
+body {
+  background-color: #f2f4f5 !important; /* Light theme background */
+  color: #606162 !important; /* Normal text color */
+}
+
+/* 4. Header / topbar */
+header, nav[role="navigation"], [class*="header"] {
+  background-color: #dee1e3 !important; /* Light theme header */
+  border-bottom: 1px solid #d6d6d6 !important;
+  color: #393b3d !important; /* Bold text color for topbar items */
+}
+
+/* 5. Bold text color */
+b, strong, .font-bold {
+  color: #393b3d !important;
+}
+
+/* 6. Main buttons green (#00b06f) */
+.btn-common-play-game-lg,
+.btn-growth-md.buy-robux {
+  background-color: #00b06f !important;
   border: none !important;
   color: #fff !important;
   border-radius: 4px !important;
   font-weight: 600 !important;
-  text-shadow: none !important; /* remove text outline/glow */
 }
 
-button:hover,
-.btn-primary:hover,
-[role="button"].btn-primary:hover,
-.btn-growth-md:hover,
-.btn-growth-sm:hover,
-.btn-growth-lg:hover,
-.rbx-navbar-signup:hover,
-.rbx-navbar-login:hover,
-a.btn-growth-md:hover,
-a.btn-growth-sm:hover,
-a.btn-growth-lg:hover {
-  background-color: #00a955 !important;
+.btn-common-play-game-lg:hover,
+.btn-growth-md.buy-robux:hover {
+  background-color: #009966 !important;
 }
 
-/* 3. Backgrounds */
-body {
-  background-color: #f2f4f5 !important; /* light theme */
+/* 7. Sign Up button special green (#3fc679), no text stroke */
+a.rbx-navbar-signup.signup-button {
+  background-color: #3fc679 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  padding: 6px 12px !important;
+  text-decoration: none !important;
+  text-shadow: none !important; /* remove stroke/outline */
 }
 
-/* Header / top navigation bar */
-header, 
-nav[role="navigation"], 
-[class*="header"], 
-.rbx-navbar {
-  background-color: #dee1e3 !important;
-  border-bottom: 1px solid #d6d6d6 !important;
-  color: #393b3d !important;
-}
-
-/* Remove unwanted white boxes inside the page */
-div, section, article, aside, main, footer {
-  background-color: transparent !important;
-}
-
-/* Specific containers that Roblox forces white on */
-.profile-platform-container,
-.container-with-header,
-.section,
-.content,
-[data-profile-type],
-[data-testid="profile-container"] {
-  background-color: transparent !important;
-}
-
-/* Keep modal/popups working (don’t break overlays) */
-.modal-content,
-.dropdown-menu,
-.popover {
-  background-color: #fff !important;
-  color: #393b3d !important;
+a.rbx-navbar-signup.signup-button:hover {
+  background-color: #35b96a !important;
 }
