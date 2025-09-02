@@ -1,6 +1,6 @@
-/* === Roblox 2020 Look === */
+/* === Roblox 2020 Look: Buttons + Font Only === */
 
-/* 1. Apply GothamSSm font */
+/* 1. Apply GothamSSm Medium font */
 @font-face {
   font-family: 'GothamSSm';
   src: url('https://devponte1.github.io/2020_Roblox_Resources/fonts/GothamSSm-Medium.woff2') format('woff2');
@@ -12,7 +12,7 @@ html, body, button, input, select, textarea {
   font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
 }
 
-/* 2. Buttons back to green */
+/* 2. Make main action buttons green */
 button, .btn-primary, [role="button"].btn-primary {
   background-color: #00B65C !important;
   border: none !important;
@@ -23,26 +23,4 @@ button, .btn-primary, [role="button"].btn-primary {
 
 button:hover, .btn-primary:hover, [role="button"].btn-primary:hover {
   background-color: #00a955 !important;
-}
-
-/* 3. Header & background */
-body {
-  background-color: #e3e3e3 !important; /* light theme */
-}
-
-header, nav[role="navigation"], [class*="header"] {
-  background-color: #f2f4f5 !important; /* light theme */
-  border-bottom: 1px solid #d6d6d6 !important;
-}
-
-/* Dark theme override (check Roblox class) */
-body.dark-theme, html.dark-theme body {
-  background-color: #1b1d1f !important;
-}
-
-body.dark-theme header,
-body.dark-theme nav[role="navigation"],
-body.dark-theme [class*="header"] {
-  background-color: #232527 !important;
-  border-bottom: 1px solid #000 !important;
 }
