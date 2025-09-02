@@ -1,4 +1,4 @@
-/* === Roblox 2020 Look: Buttons, Font, Colors === */
+/* === Roblox 2020 Look: Buttons + Font (no description/title override) === */
 
 /* 1. GothamSSm Medium font */
 @font-face {
@@ -9,8 +9,11 @@
   font-display: swap;
 }
 
-/* 2. Apply font globally */
-* {
+/* 2. Apply font to all UI elements, excluding descriptions/titles */
+button,
+input, select, textarea,
+a,
+.navbar-nav * {
   font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
 }
 
@@ -29,30 +32,17 @@
   background-color: #009966 !important;
 }
 
-/* 4. Sign Up buttons special green (#3fc679) */
-.btn-sign-up, .btn-secondary-signup {
+/* 4. Sign Up button special green (#3fc679) */
+/* Updated selector to match actual element */
+a.rbx-navbar-signup.signup-button {
   background-color: #3fc679 !important;
   color: #fff !important;
   border-radius: 4px !important;
   font-weight: 600 !important;
+  padding: 6px 12px !important; /* adjust size if needed */
+  text-decoration: none !important;
 }
 
-.btn-sign-up:hover, .btn-secondary-signup:hover {
+a.rbx-navbar-signup.signup-button:hover {
   background-color: #35b96a !important;
-}
-
-/* 5. Favorites / Follow / Vote / Share styling */
-.favorite-follow-vote-share {
-  display: flex !important;
-  gap: 10px !important;
-  align-items: center !important;
-  font-family: 'GothamSSm', Arial, sans-serif !important;
-}
-
-.favorite-follow-vote-share .tooltip-container {
-  background: none !important;
-}
-
-.favorite-follow-vote-share .vote-summary .vote-text {
-  font-weight: 600 !important;
 }
