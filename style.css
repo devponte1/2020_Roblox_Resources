@@ -22,9 +22,9 @@ html, body, #rbx-body {
     --header-text-light: #393b3d;
 
     /* Dark Theme */
-    --bg-color-dark: #242527;
-    --header-bg-dark: #363739;
-    --text-color-dark: #c2c2c2;
+    --bg-color-dark: #1c2022;
+    --header-bg-dark: #111417;
+    --text-color-dark: #ffffff;
     --header-text-dark: #ffffff;
 }
 
