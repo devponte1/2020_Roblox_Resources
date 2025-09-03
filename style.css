@@ -16,14 +16,14 @@ html, body, #rbx-body {
 /* === Theme Presets === */
 :root {
     /* Light Theme */
-    --bg-color-light: #f2f4f5;
-    --header-bg-light: #dee1e3;
+    --bg-color-light: #f4f6f8;
+    --header-bg-light: #edf1f4;
     --text-color-light: #606162;
     --header-text-light: #393b3d;
 
     /* Dark Theme */
-    --bg-color-dark: #1c2022;
-    --header-bg-dark: #111417;
+    --bg-color-dark: #232526;
+    --header-bg-dark: #1f1f21;
     --text-color-dark: #ffffff;
     --header-text-dark: #ffffff;
 }
