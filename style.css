@@ -1,23 +1,63 @@
-/* === Roblox 2020 Look === */ 
+/* === Roblox 2020 Look === */
 
 /* 1. Font: GothamSSm */
 @font-face { 
     font-family: 'GothamSSm'; 
-    src: url('https://devponte1.github.io/2020-Roblox_Resources/fonts/GothamSSm-Medium.woff2') format('woff2'); 
+    src: url('./fonts/GothamSSm-Medium.woff2') format('woff2'); 
     font-weight: 500; 
     font-style: normal; 
 } 
 
-html, body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, span, a, div, li { 
+html, body, #rbx-body { 
     font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important; 
     color: #606162 !important; 
-} 
+}
 
-b, strong, h1, h2, h3, h4, h5, h6 { 
-    color: #393b3d !important; 
-} 
+/* === Theme Presets === */
+:root {
+    /* Light Theme */
+    --bg-color-light: #f2f4f5;
+    --header-bg-light: #dee1e3;
+    --text-color-light: #606162;
+    --header-text-light: #393b3d;
 
-/* 2. Only PLAY/JOIN buttons green */
+    /* Dark Theme */
+    --bg-color-dark: #242527;
+    --header-bg-dark: #363739;
+    --text-color-dark: #c2c2c2;
+    --header-text-dark: #ffffff;
+}
+
+/* === Light Theme === */
+body.light-theme#rbx-body {
+    background-color: var(--bg-color-light) !important;
+    color: var(--text-color-light) !important;
+}
+
+body.light-theme header,
+body.light-theme nav[role="navigation"],
+body.light-theme [class*="header"],
+body.light-theme .rbx-navbar {
+    background-color: var(--header-bg-light) !important;
+    color: var(--header-text-light) !important;
+}
+
+/* === Dark Theme === */
+body.dark-theme#rbx-body {
+    background-color: var(--bg-color-dark) !important;
+    color: var(--text-color-dark) !important;
+}
+
+body.dark-theme header,
+body.dark-theme nav[role="navigation"],
+body.dark-theme [class*="header"],
+body.dark-theme .rbx-navbar {
+    background-color: var(--header-bg-dark) !important;
+    color: var(--header-text-dark) !important;
+}
+
+/* === Buttons === */
+/* Only PLAY/JOIN buttons green */
 .btn-common-play-game-lg,
 .btn-growth-md.play-button,
 .btn-growth-sm.play-button,
@@ -39,30 +79,12 @@ b, strong, h1, h2, h3, h4, h5, h6 {
 
 /* Leave signup/login button untouched */
 .rbx-navbar-signup {
-    background-color: #00A2FF !important; /* Roblox special blue/green for signup */
+    background-color: #00A2FF !important;
     color: #fff !important;
     border-radius: 4px !important;
 }
 
-/* 3. Backgrounds */
-body { 
-    background-color: #f2f4f5 !important; 
-} 
-
-header, nav[role="navigation"], [class*="header"], .rbx-navbar { 
-    background-color: #dee1e3 !important; 
-    border-bottom: 1px solid #d6d6d6 !important; 
-    color: #393b3d !important; 
-} 
-
-div, section, article, aside, main, footer { 
-    background-color: transparent !important; 
-} 
-
-.profile-platform-container, .container-with-header, .section, .content, [data-profile-type], [data-testid="profile-container"] { 
-    background-color: transparent !important; 
-} 
-
+/* Modals / popups */
 .modal-content, .dropdown-menu, .popover { 
     background-color: #fff !important; 
     color: #393b3d !important; 
