@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
 
 /* === Skip Text Color Override === */
 .skip-change-color {
-    color: var(--skip-change-color-light) !important; /* will update per theme below */
+    color: inherit !important; /* preserves original color */
 }
 
 /* === Theme Presets === */
@@ -62,9 +62,6 @@ body.light-theme #navbar-search-input {
     background-color: #ffffff !important;
     color: var(--text-color-light) !important;
 }
-body.light-theme .skip-change-color {
-    color: var(--skip-change-color-light) !important;
-}
 
 /* === Dark Theme === */
 body.dark-theme#rbx-body {
@@ -82,9 +79,6 @@ body.dark-theme #navbar-search-input {
     background-color: #000000 !important;
     color: var(--text-color-dark) !important;
 }
-body.dark-theme .skip-change-color {
-    color: var(--skip-change-color-dark) !important;
-}
 
 /* === Buttons === */
 .btn-common-play-game-lg,
@@ -92,20 +86,31 @@ body.dark-theme .skip-change-color {
 .btn-growth-sm.play-button,
 .btn-growth-lg.play-button,
 .PurchaseButton,
-.MuiButton-root:not(.MuiButton-outlined) { 
-    background-color: var(--play-btn) !important; 
-    border: none !important; 
-    color: #fff !important; 
-    font-weight: 600 !important; 
-    text-shadow: none !important; 
-    /* keep border-radius as-is */
+.MuiButton-root:not(.MuiButton-outlined),
+#chat-button { 
+    all: unset;
+    display: inline-block;
+    width: 100%;
+    padding: 8px 16px;
+    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: var(--play-btn);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }
 .btn-common-play-game-lg:hover,
 .btn-growth-md.play-button:hover,
 .btn-growth-sm.play-button:hover,
 .btn-growth-lg.play-button:hover,
 .PurchaseButton:hover,
-.MuiButton-root:not(.MuiButton-outlined):hover { 
+.MuiButton-root:not(.MuiButton-outlined):hover,
+#chat-button:hover { 
     background-color: var(--play-btn-hover) !important; 
 }
 
@@ -113,48 +118,33 @@ body.dark-theme .skip-change-color {
 .rbx-navbar-signup {
     background-color: var(--signup-btn) !important;
     color: #fff !important;
-    /* keep border-radius */
 }
 
 /* Unfriend / Remove Connection button */
 .MuiButton-outlined.MuiButton-outlinedSecondary,
 #unfriend-button {
-    background-color: var(--unfriend-btn) !important;
-    border-color: var(--unfriend-btn) !important;
-    color: #fff !important;
-}
-
-/* === Ensure PurchaseButton style applies to target buttons === */
-#chat-button {
     all: unset;
     display: inline-block;
+    width: 100%;
     padding: 8px 16px;
     font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif;
     font-weight: 500;
-    color: #fff;
-    background-color: var(--play-btn);
-    border: none;
-    cursor: pointer;
-    text-align: center;
+    font-size: 14px;
     line-height: 1.5;
-}
-#chat-button:hover {
-    background-color: var(--play-btn-hover);
-}
-
-#unfriend-button {
-    all: unset;
-    display: inline-block;
-    padding: 8px 16px;
-    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif;
-    font-weight: 500;
     color: #fff;
     background-color: var(--unfriend-btn);
-    border: none;
+    border: 1px solid var(--unfriend-btn);
+    border-radius: 4px;
     cursor: pointer;
     text-align: center;
-    line-height: 1.5;
+    text-decoration: none;
 }
-#unfriend-button:hover {
-    background-color: #e03b3b;
+#unfriend-button:hover,
+.MuiButton-outlined.MuiButton-outlinedSecondary:hover {
+    background-color: #e03b3b !important;
+}
+
+/* === Hide Friends Carousel Tile === */
+.friends-carousel-tile {
+    display: none !important;
 }
