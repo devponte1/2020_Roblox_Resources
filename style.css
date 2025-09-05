@@ -17,25 +17,20 @@
 input, textarea, button, select, option,
 h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
     font-family: inherit !important;
+    color: inherit !important; /* inherit text color automatically */
 }
 
 /* === Theme Presets === */
 :root {
     /* Light Theme */
-    --bg-color-light: #f4f6f8;
-    --header-bg-light: #edf1f4;
+    --bg-color-light: #f2f4f5;
+    --header-bg-light: #dee1e3;
     --text-color-light: #393b3d;
-    --dropdown-bg-light: #ffffff;
-    --dropdown-text-light: #393b3d;
-    --border-color-light: #d0d3d6;
 
     /* Dark Theme */
     --bg-color-dark: #232527;
     --header-bg-dark: #191b1d;
     --text-color-dark: #f5f5f5;
-    --dropdown-bg-dark: #2c2e30;
-    --dropdown-text-dark: #ffffff;
-    --border-color-dark: #3a3c3e;
 
     /* Accent colors */
     --play-btn: #00B65C;
@@ -54,12 +49,9 @@ body.light-theme [class*="header"],
 body.light-theme .rbx-navbar {
     background-color: var(--header-bg-light) !important;
 }
-body.light-theme .modal-content,
-body.light-theme .dropdown-menu,
-body.light-theme .popover {
-    background-color: var(--dropdown-bg-light) !important;
-    color: var(--dropdown-text-light) !important;
-    border: 1px solid var(--border-color-light) !important;
+body.light-theme #navbar-search-input {
+    background-color: #ffffff !important;
+    color: var(--text-color-light) !important;
 }
 
 /* === Dark Theme === */
@@ -73,12 +65,9 @@ body.dark-theme [class*="header"],
 body.dark-theme .rbx-navbar {
     background-color: var(--header-bg-dark) !important;
 }
-body.dark-theme .modal-content,
-body.dark-theme .dropdown-menu,
-body.dark-theme .popover {
-    background-color: var(--dropdown-bg-dark) !important;
-    color: var(--dropdown-text-dark) !important;
-    border: 1px solid var(--border-color-dark) !important;
+body.dark-theme #navbar-search-input {
+    background-color: #000000 !important;
+    color: var(--text-color-dark) !important;
 }
 
 /* === Buttons === */
