@@ -1,4 +1,4 @@
-/* === Roblox 2020 Style === */
+/* === Roblox 2020 Style w/ Themes === */
 
 /* 1. Font: GothamSSm */
 @font-face { 
@@ -8,31 +8,15 @@
     font-style: normal; 
 } 
 
-/* === Roblox 2020 Font Override === */
-
-/* Load GothamSSm */
-@font-face { 
-    font-family: 'GothamSSm'; 
-    src: url('./fonts/GothamSSm-Medium.woff2') format('woff2'); 
-    font-weight: 500; 
-    font-style: normal; 
-}
-
-/* Apply to literally everything */
+/* === Apply Font Globally === */
 *,
 *::before,
 *::after {
     font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
 }
-
-/* Make sure form controls also use it */
-input, textarea, button, select, option {
-    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
-}
-
-/* Ensure headings and text-based elements stay consistent */
+input, textarea, button, select, option,
 h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
-    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
+    font-family: inherit !important;
 }
 
 /* === Theme Presets === */
@@ -41,11 +25,22 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
     --bg-color-light: #f4f6f8;
     --header-bg-light: #edf1f4;
     --text-color-light: #393b3d;
+    --dropdown-bg-light: #ffffff;
+    --dropdown-text-light: #393b3d;
+    --border-color-light: #d0d3d6;
 
     /* Dark Theme */
     --bg-color-dark: #232527;
     --header-bg-dark: #191b1d;
-    --text-color-dark: #ffffff;
+    --text-color-dark: #f5f5f5;
+    --dropdown-bg-dark: #2c2e30;
+    --dropdown-text-dark: #ffffff;
+    --border-color-dark: #3a3c3e;
+
+    /* Accent colors */
+    --play-btn: #00B65C;
+    --play-btn-hover: #00a955;
+    --signup-btn: #00A2FF;
 }
 
 /* === Light Theme === */
@@ -53,12 +48,18 @@ body.light-theme#rbx-body {
     background-color: var(--bg-color-light) !important;
     color: var(--text-color-light) !important;
 }
-
 body.light-theme header,
 body.light-theme nav[role="navigation"],
 body.light-theme [class*="header"],
 body.light-theme .rbx-navbar {
     background-color: var(--header-bg-light) !important;
+}
+body.light-theme .modal-content,
+body.light-theme .dropdown-menu,
+body.light-theme .popover {
+    background-color: var(--dropdown-bg-light) !important;
+    color: var(--dropdown-text-light) !important;
+    border: 1px solid var(--border-color-light) !important;
 }
 
 /* === Dark Theme === */
@@ -66,44 +67,40 @@ body.dark-theme#rbx-body {
     background-color: var(--bg-color-dark) !important;
     color: var(--text-color-dark) !important;
 }
-
 body.dark-theme header,
 body.dark-theme nav[role="navigation"],
 body.dark-theme [class*="header"],
 body.dark-theme .rbx-navbar {
     background-color: var(--header-bg-dark) !important;
 }
+body.dark-theme .modal-content,
+body.dark-theme .dropdown-menu,
+body.dark-theme .popover {
+    background-color: var(--dropdown-bg-dark) !important;
+    color: var(--dropdown-text-dark) !important;
+    border: 1px solid var(--border-color-dark) !important;
+}
 
 /* === Buttons === */
-/* Only PLAY/JOIN buttons green */
 .btn-common-play-game-lg,
 .btn-growth-md.play-button,
 .btn-growth-sm.play-button,
 .btn-growth-lg.play-button {
-    background-color: #00B65C !important; 
+    background-color: var(--play-btn) !important; 
     border: none !important; 
     color: #fff !important; 
     border-radius: 4px !important; 
     font-weight: 600 !important; 
     text-shadow: none !important; 
 }
-
 .btn-common-play-game-lg:hover,
 .btn-growth-md.play-button:hover,
 .btn-growth-sm.play-button:hover,
 .btn-growth-lg.play-button:hover {
-    background-color: #00a955 !important; 
+    background-color: var(--play-btn-hover) !important; 
 }
-
-/* Leave signup/login button untouched */
 .rbx-navbar-signup {
-    background-color: #00A2FF !important;
+    background-color: var(--signup-btn) !important;
     color: #fff !important;
     border-radius: 4px !important;
-}
-
-/* Modals / popups */
-.modal-content, .dropdown-menu, .popover { 
-    background-color: #fff !important; 
-    color: #393b3d !important; 
 }
