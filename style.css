@@ -1,4 +1,4 @@
-/* === Roblox 2020 Look === */
+/* === Roblox 2020 Style === */
 
 /* 1. Font: GothamSSm */
 @font-face { 
@@ -8,9 +8,31 @@
     font-style: normal; 
 } 
 
-html, body, #rbx-body { 
-    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important; 
-    color: #606162 !important; 
+/* === Roblox 2020 Font Override === */
+
+/* Load GothamSSm */
+@font-face { 
+    font-family: 'GothamSSm'; 
+    src: url('./fonts/GothamSSm-Medium.woff2') format('woff2'); 
+    font-weight: 500; 
+    font-style: normal; 
+}
+
+/* Apply to literally everything */
+*,
+*::before,
+*::after {
+    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
+}
+
+/* Make sure form controls also use it */
+input, textarea, button, select, option {
+    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
+}
+
+/* Ensure headings and text-based elements stay consistent */
+h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
+    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif !important;
 }
 
 /* === Theme Presets === */
@@ -37,7 +59,6 @@ body.light-theme nav[role="navigation"],
 body.light-theme [class*="header"],
 body.light-theme .rbx-navbar {
     background-color: var(--header-bg-light) !important;
-    color: var(--header-text-light) !important;
 }
 
 /* === Dark Theme === */
@@ -51,7 +72,6 @@ body.dark-theme nav[role="navigation"],
 body.dark-theme [class*="header"],
 body.dark-theme .rbx-navbar {
     background-color: var(--header-bg-dark) !important;
-    color: var(--header-text-dark) !important;
 }
 
 /* === Buttons === */
