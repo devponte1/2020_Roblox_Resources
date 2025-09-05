@@ -1,4 +1,4 @@
-/* === Roblox 2020 Style w/ Themes === */
+/* === Roblox 2020 Style w/ Themes & Skip-Color === */
 
 /* 1. Font: GothamSSm */
 @font-face { 
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
 
 /* === Skip Text Color Override === */
 .skip-change-color {
-    color: inherit !important; /* keeps theme default */
+    color: var(--skip-change-color-light) !important; /* will update per theme below */
 }
 
 /* === Theme Presets === */
@@ -31,16 +31,19 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
     --bg-color-light: #f2f4f5;
     --header-bg-light: #dee1e3;
     --text-color-light: #393b3d;
+    --skip-change-color-light: #ffffff;
 
     /* Dark Theme */
     --bg-color-dark: #232527;
     --header-bg-dark: #191b1d;
     --text-color-dark: #f5f5f5;
+    --skip-change-color-dark: #ffffff;
 
     /* Accent colors */
     --play-btn: #00B65C;
     --play-btn-hover: #00a955;
     --signup-btn: #00A2FF;
+    --unfriend-btn: #FF4C4C;
 }
 
 /* === Light Theme === */
@@ -59,6 +62,9 @@ body.light-theme #navbar-search-input {
     background-color: #ffffff !important;
     color: var(--text-color-light) !important;
 }
+body.light-theme .skip-change-color {
+    color: var(--skip-change-color-light) !important;
+}
 
 /* === Dark Theme === */
 body.dark-theme#rbx-body {
@@ -76,27 +82,79 @@ body.dark-theme #navbar-search-input {
     background-color: #000000 !important;
     color: var(--text-color-dark) !important;
 }
+body.dark-theme .skip-change-color {
+    color: var(--skip-change-color-dark) !important;
+}
 
 /* === Buttons === */
 .btn-common-play-game-lg,
 .btn-growth-md.play-button,
 .btn-growth-sm.play-button,
-.btn-growth-lg.play-button {
+.btn-growth-lg.play-button,
+.PurchaseButton,
+.MuiButton-root:not(.MuiButton-outlined) { 
     background-color: var(--play-btn) !important; 
     border: none !important; 
     color: #fff !important; 
     font-weight: 600 !important; 
     text-shadow: none !important; 
-    /* keep original border-radius */
+    /* keep border-radius as-is */
 }
 .btn-common-play-game-lg:hover,
 .btn-growth-md.play-button:hover,
 .btn-growth-sm.play-button:hover,
-.btn-growth-lg.play-button:hover {
+.btn-growth-lg.play-button:hover,
+.PurchaseButton:hover,
+.MuiButton-root:not(.MuiButton-outlined):hover { 
     background-color: var(--play-btn-hover) !important; 
 }
+
+/* Signup / normal button */
 .rbx-navbar-signup {
     background-color: var(--signup-btn) !important;
     color: #fff !important;
-    /* keep original border-radius */
+    /* keep border-radius */
+}
+
+/* Unfriend / Remove Connection button */
+.MuiButton-outlined.MuiButton-outlinedSecondary,
+#unfriend-button {
+    background-color: var(--unfriend-btn) !important;
+    border-color: var(--unfriend-btn) !important;
+    color: #fff !important;
+}
+
+/* === Ensure PurchaseButton style applies to target buttons === */
+#chat-button {
+    all: unset;
+    display: inline-block;
+    padding: 8px 16px;
+    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--play-btn);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.5;
+}
+#chat-button:hover {
+    background-color: var(--play-btn-hover);
+}
+
+#unfriend-button {
+    all: unset;
+    display: inline-block;
+    padding: 8px 16px;
+    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--unfriend-btn);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.5;
+}
+#unfriend-button:hover {
+    background-color: #e03b3b;
 }
