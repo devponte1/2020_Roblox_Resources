@@ -18,14 +18,12 @@ html, body, #rbx-body {
     /* Light Theme */
     --bg-color-light: #f4f6f8;
     --header-bg-light: #edf1f4;
-    --text-color-light: #606162;
-    --header-text-light: #393b3d;
+    --text-color-light: #393b3d;
 
     /* Dark Theme */
-    --bg-color-dark: #232526;
-    --header-bg-dark: #1f1f21;
-    --text-color-dark: #c2c2c2;
-    --header-text-dark: #ffffff;
+    --bg-color-dark: #232527;
+    --header-bg-dark: #191b1d;
+    --text-color-dark: #ffffff;
 }
 
 /* === Light Theme === */
