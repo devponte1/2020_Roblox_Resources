@@ -17,7 +17,12 @@
 input, textarea, button, select, option,
 h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
     font-family: inherit !important;
-    color: inherit !important; /* inherit text color automatically */
+    color: inherit !important;
+}
+
+/* === Skip Text Color Override === */
+.skip-change-color {
+    color: inherit !important; /* keeps theme default */
 }
 
 /* === Theme Presets === */
@@ -46,7 +51,8 @@ body.light-theme#rbx-body {
 body.light-theme header,
 body.light-theme nav[role="navigation"],
 body.light-theme [class*="header"],
-body.light-theme .rbx-navbar {
+body.light-theme .rbx-navbar,
+body.light-theme #navigation {
     background-color: var(--header-bg-light) !important;
 }
 body.light-theme #navbar-search-input {
@@ -62,7 +68,8 @@ body.dark-theme#rbx-body {
 body.dark-theme header,
 body.dark-theme nav[role="navigation"],
 body.dark-theme [class*="header"],
-body.dark-theme .rbx-navbar {
+body.dark-theme .rbx-navbar,
+body.dark-theme #navigation {
     background-color: var(--header-bg-dark) !important;
 }
 body.dark-theme #navbar-search-input {
@@ -78,9 +85,9 @@ body.dark-theme #navbar-search-input {
     background-color: var(--play-btn) !important; 
     border: none !important; 
     color: #fff !important; 
-    border-radius: 4px !important; 
     font-weight: 600 !important; 
     text-shadow: none !important; 
+    /* keep original border-radius */
 }
 .btn-common-play-game-lg:hover,
 .btn-growth-md.play-button:hover,
@@ -91,5 +98,5 @@ body.dark-theme #navbar-search-input {
 .rbx-navbar-signup {
     background-color: var(--signup-btn) !important;
     color: #fff !important;
-    border-radius: 4px !important;
+    /* keep original border-radius */
 }
