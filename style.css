@@ -1,4 +1,4 @@
-/* === Roblox 2020 Style w/ Themes & Skip-Color === */
+/* === Roblox 2020 Style w/ Themes & Skip-Color & Proper Buttons === */
 
 /* 1. Font: GothamSSm */
 @font-face { 
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, li, label, strong, em {
 
 /* === Skip Text Color Override === */
 .skip-change-color {
-    color: inherit !important; /* preserves original color */
+    color: var(--skip-change-color-light) !important; /* will update per theme below */
 }
 
 /* === Theme Presets === */
@@ -62,6 +62,9 @@ body.light-theme #navbar-search-input {
     background-color: #ffffff !important;
     color: var(--text-color-light) !important;
 }
+body.light-theme .skip-change-color {
+    color: var(--skip-change-color-light) !important;
+}
 
 /* === Dark Theme === */
 body.dark-theme#rbx-body {
@@ -79,72 +82,66 @@ body.dark-theme #navbar-search-input {
     background-color: #000000 !important;
     color: var(--text-color-dark) !important;
 }
+body.dark-theme .skip-change-color {
+    color: var(--skip-change-color-dark) !important;
+}
 
 /* === Buttons === */
-.btn-common-play-game-lg,
-.btn-growth-md.play-button,
-.btn-growth-sm.play-button,
-.btn-growth-lg.play-button,
-.PurchaseButton,
-.MuiButton-root:not(.MuiButton-outlined),
-#chat-button { 
+
+/* Generic Button Reset for Profile / Store buttons */
+button, .PurchaseButton, #chat-button, #unfriend-button {
     all: unset;
     display: inline-block;
-    width: 100%;
-    padding: 8px 16px;
+    padding: 10px 20px;
     font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.5;
-    color: #fff;
-    background-color: var(--play-btn);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
     text-align: center;
-    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;
+    min-width: 80px;
+    box-sizing: border-box;
 }
-.btn-common-play-game-lg:hover,
-.btn-growth-md.play-button:hover,
-.btn-growth-sm.play-button:hover,
-.btn-growth-lg.play-button:hover,
+
+/* Buy / Join / Chat Buttons */
+.PurchaseButton,
+#chat-button,
+.MuiButton-root:not(.MuiButton-outlined) {
+    background-color: var(--play-btn);
+    color: #fff;
+    border: none;
+    text-shadow: none;
+    transition: background 0.15s ease;
+}
 .PurchaseButton:hover,
-.MuiButton-root:not(.MuiButton-outlined):hover,
-#chat-button:hover { 
-    background-color: var(--play-btn-hover) !important; 
+#chat-button:hover,
+.MuiButton-root:not(.MuiButton-outlined):hover {
+    background-color: var(--play-btn-hover);
 }
 
-/* Signup / normal button */
-.rbx-navbar-signup {
-    background-color: var(--signup-btn) !important;
-    color: #fff !important;
-}
-
-/* Unfriend / Remove Connection button */
+/* Remove Friend / Unfriend Button */
 .MuiButton-outlined.MuiButton-outlinedSecondary,
 #unfriend-button {
-    all: unset;
-    display: inline-block;
-    width: 100%;
-    padding: 8px 16px;
-    font-family: 'GothamSSm', 'Segoe UI', Arial, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #fff;
     background-color: var(--unfriend-btn);
-    border: 1px solid var(--unfriend-btn);
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
+    border: none;
+    color: #fff;
+    transition: background 0.15s ease;
 }
-#unfriend-button:hover,
-.MuiButton-outlined.MuiButton-outlinedSecondary:hover {
-    background-color: #e03b3b !important;
+.MuiButton-outlined.MuiButton-outlinedSecondary:hover,
+#unfriend-button:hover {
+    background-color: #e03b3b;
 }
 
-/* === Hide Friends Carousel Tile === */
+/* Keep border-radius same as original buttons */
+.PurchaseButton span,
+#chat-button span,
+#unfriend-button span {
+    display: inline-block;
+    pointer-events: none;
+}
+
+/* === Optional: Remove the friends carousel tile === */
 .friends-carousel-tile {
     display: none !important;
 }
